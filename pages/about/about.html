@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Ideal Weight Calculator</h1>
+  <p>
+    Height in:
+  </p>
+
+<ion-item>
+  <ion-label>feet:</ion-label>
+  <ion-input type="number" [(ngModel)]="feet"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>inches:</ion-label>
+  <ion-input type="number" [(ngModel)]="inches"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label color="dark">Gender: </ion-label>
+    <ion-select interface="popover" [(ngModel)]="gender">
+      <ion-option value="m">Male</ion-option>
+      <ion-option value="f">Female</ion-option>
+    </ion-select>
+</ion-item>
+
+<button ion-button color="secondary" (click)="calculateIdealWeight()">
+  CALCULATE
+</button>
+
+<ion-item>
+  <b>Your ideal weight according to: </b>
+  <h2>• Miller (1983)‎‏‏‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ ‎‏‏‎‏‏‎ ‎‏‏‎ ‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‎{{millerFormula}}</h2>
+  <h2>• Robinson (1983)‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎{{robinsonFormula}}</h2>
+  <h2>• Devine (1974)‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎{{devineFormula}}</h2>
+  <h2>• Hamwi (1964)‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎‏‏‎‏‏‎ ‎ ‎‎‏‏‎ ‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎‎‎‏‏‎ ‎‏‏‎ ‎{{hamwiFormula}}</h2>
+</ion-item>
+
+</ion-content>
