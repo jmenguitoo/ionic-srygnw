@@ -8,19 +8,19 @@
 
 <ion-content padding>
   <h1><b>IDEAL WEIGHT CALCULATOR</b></h1>
-  <p></p>
-  <p>Height in:  </p>
+  <br/><br/>
+  <p><b>Height in:</b></p>
 
 <ion-item>
-  <ion-label>feet:</ion-label>
+  <ion-label color="dark">feet:</ion-label>
   <ion-input type="number" [(ngModel)]="feet"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label>inches:</ion-label>
+  <ion-label color="dark">inches:</ion-label>
   <ion-input type="number" [(ngModel)]="inches"></ion-input>
 </ion-item>
-
+<p></p>
 <ion-item>
     <ion-label color="dark">Gender: </ion-label>
     <ion-select interface="popover" [(ngModel)]="gender">
@@ -28,8 +28,8 @@
       <ion-option value="f">Female</ion-option>
     </ion-select>
 </ion-item>
-
-<button ion-button color="secondary" (click)="calculateIdealWeight()">
+<p></p>
+<button ion-button color="dark" (click)="calculateIdealWeight()">
   CALCULATE
 </button>
 <br/><br/>
