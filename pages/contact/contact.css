@@ -1,0 +1,11 @@
+ion-content {
+  background: linear-gradient(to bottom, #ffffff, #ffffff, #8ec73d);
+}
+h2 {
+  color: #440083;
+  text-align:center;
+}
+p {
+  color: #8300da;
+  text-align:center;
+}

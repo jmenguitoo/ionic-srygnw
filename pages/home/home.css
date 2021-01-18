@@ -1,16 +1,13 @@
 ion-content {
-  background: linear-gradient(to bottom, #a8ff78, #78ffd6);
+  background: linear-gradient(to bottom, #ffffff, #ffffff, #f2652d);
 }
 h2 {
-  color: #440083;
+  color: #8ec73d;
   text-align:center;
 }
 p {
-  color: #8300da;
   text-align:center;
 }
 ion-item {
   background: #cefff0;
 }
-
-//#f2652d
