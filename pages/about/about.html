@@ -20,20 +20,26 @@
   <ion-label color="dark">inches:</ion-label>
   <ion-input type="number" [(ngModel)]="inches"></ion-input>
 </ion-item>
+
 <p></p>
+
 <ion-item>
-    <ion-label color="dark">Gender: </ion-label>
+    <ion-label color="dark"> Gender: </ion-label>
     <ion-select interface="popover" [(ngModel)]="gender">
       <ion-option value="m">Male</ion-option>
       <ion-option value="f">Female</ion-option>
     </ion-select>
 </ion-item>
+
 <p></p>
+
 <button ion-button color="dark" (click)="calculateIdealWeight()">
   CALCULATE
 </button>
+
 <br/><br/>
-<ion-item>
+
+<ion-item *ngIf="calculateIdealWeight">
   <b>Your ideal weight according to: </b>
   <h2>• Miller (1983)‎‏‏‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ ‎‏‏‎‏‏‎ ‎‏‏‎ ‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎‎‎<b>{{millerFormula}}</b></h2>
   <h2>• Robinson (1983)‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‏‏‎‎‏‏‎ ‎‏‏‎ ‎‎‏‏‎ ‎‏‏‎ <b>‎{{robinsonFormula}}</b></h2>

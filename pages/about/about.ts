@@ -6,6 +6,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'about.html',
   styleUrls: ['about.css']
 })
+
 export class AboutPage {
     feet: number;
     inches: number;
@@ -16,11 +17,10 @@ export class AboutPage {
     hamwiFormula: number;
     devineFormula: number;
   constructor(public navCtrl: NavController) {
-
   }
-calculateIdealWeight(){
 
-    if (this.gender = "m") {
+calculateIdealWeight(){
+    if (this.gender = "m" && this.feet >= 5 && this.inches <= 11) {
       this.robinsonFormula = 52 + 1.9 * ((this.feet - 5) + this.inches);
        this.robinsonFormula = parseFloat(this.robinsonFormula.toFixed(0)) + " kg.";
       this.millerFormula = 56.2 + 1.41 * ((this.feet - 5) + this.inches);
@@ -29,7 +29,7 @@ calculateIdealWeight(){
        this.hamwiFormula = parseFloat(this.hamwiFormula.toFixed(0)) + " kg.";
       this.devineFormula = 50 + 2.3  * ((this.feet - 5) + this.inches);
       this.devineFormula = parseFloat(this.devineFormula.toFixed(0)) + " kg.";
-    } else if (this.gender = "f") {
+    } else if (this.gender = "f" && this.feet >= 5 && this.inches <= 11) {
       this.robinsonFormula = 49 + 1.7 * ((this.feet - 5) + this.inches);
        this.robinsonFormula = parseFloat(this.robinsonFormula.toFixed(0)) + " kg.";
       this.millerFormula = 53.1 + 1.36 * ((this.feet - 5) + this.inches);
@@ -39,6 +39,10 @@ calculateIdealWeight(){
       this.devineFormula = 45.5 + 2.3  * ((this.feet - 5) + this.inches);
        this.devineFormula = parseFloat(this.devineFormula.toFixed(0)) + " kg."; 
     } else {
+      this.robinsonFormula = "ERROR";
+      this.millerFormula = "ERROR";
+      this.hamwiFormula = "ERROR";
+      this.devineFormula = "ERROR";
     }
 }
 }
