@@ -20,7 +20,7 @@ export class AboutPage {
   }
 
 calculateIdealWeight(){
-    if ((this.feet >= 5) && (this.inches <= 11) && (this.gender === "m")) {
+    if ((this.feet >= 5) && (0 < this.inches <= 11) && (this.gender === "m")) {
       this.robinsonFormula = 52 + 1.9 * ((this.feet - 5) + this.inches);
        this.robinsonFormula = parseFloat(this.robinsonFormula.toFixed(0)) + " kg.";
       this.millerFormula = 56.2 + 1.41 * ((this.feet - 5) + this.inches);
@@ -30,7 +30,7 @@ calculateIdealWeight(){
       this.devineFormula = 50 + 2.3  * ((this.feet - 5) + this.inches);
        this.devineFormula = parseFloat(this.devineFormula.toFixed(0)) + " kg.";
     } 
-      else if ((this.feet >= 5) && (this.inches <= 11) && (this.gender === "f")) {
+      else if ((this.feet >= 5) && (0 < this.inches <= 11) && (this.gender === "f")) {
       this.robinsonFormula = 49 + 1.7 * ((this.feet - 5) + this.inches);
        this.robinsonFormula = parseFloat(this.robinsonFormula.toFixed(0)) + " kg.";
       this.millerFormula = 53.1 + 1.36 * ((this.feet - 5) + this.inches);
